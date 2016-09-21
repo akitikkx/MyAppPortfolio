@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ahmedtikiwa.myappportfolio.MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp"
+        style="@style/Heading"
+        android:text="@string/home_title" />
+
+    <Button
+        android:id="@+id/popular_movies"
+        style="@style/HomeBtnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/stock_hawk"
+        android:layout_alignStart="@+id/stock_hawk"
+        android:layout_below="@+id/title"
+        android:layout_marginBottom="@dimen/home_btn_margin"
+        android:text="@string/btn_title_popular_movies" />
+
+    <Button
+        android:id="@+id/stock_hawk"
+        style="@style/HomeBtnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/build_it_bigger"
+        android:layout_alignStart="@+id/build_it_bigger"
+        android:layout_below="@+id/popular_movies"
+        android:layout_marginBottom="@dimen/home_btn_margin"
+        android:text="@string/btn_title_stock_hawk" />
+
+    <Button
+        android:id="@+id/build_it_bigger"
+        style="@style/HomeBtnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/make_app_material"
+        android:layout_alignStart="@+id/make_app_material"
+        android:layout_below="@+id/stock_hawk"
+        android:layout_marginBottom="@dimen/home_btn_margin"
+        android:text="@string/btn_title_build_it_bigger" />
+
+    <Button
+        android:id="@+id/make_app_material"
+        style="@style/HomeBtnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/build_it_bigger"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/home_btn_margin"
+        android:text="@string/btn_title_make_app_material" />
+
+    <Button
+        android:id="@+id/go_ubiquitous"
+        style="@style/HomeBtnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/make_app_material"
+        android:layout_alignStart="@+id/make_app_material"
+        android:layout_below="@+id/make_app_material"
+        android:layout_marginBottom="@dimen/home_btn_margin"
+        android:text="@string/btn_title_go_ubiquitous" />
+
+    <Button
+        android:id="@+id/capstone"
+        style="@style/HomeBtnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/go_ubiquitous"
+        android:layout_alignStart="@+id/go_ubiquitous"
+        android:layout_below="@+id/go_ubiquitous"
+        android:text="@string/btn_title_capstone" />
+</RelativeLayout>
