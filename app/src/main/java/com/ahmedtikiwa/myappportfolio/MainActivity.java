@@ -26,39 +26,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void setupUIElements() {
         popularMovies = (Button) findViewById(R.id.popular_movies);
-        popularMovies.setOnClickListener(this);
         stockHawk = (Button) findViewById(R.id.stock_hawk);
-        stockHawk.setOnClickListener(this);
         buildItBigger = (Button) findViewById(R.id.build_it_bigger);
-        buildItBigger.setOnClickListener(this);
         makeMaterial = (Button) findViewById(R.id.make_app_material);
-        makeMaterial.setOnClickListener(this);
         goUbiquitous = (Button) findViewById(R.id.go_ubiquitous);
-        goUbiquitous.setOnClickListener(this);
         capstone = (Button) findViewById(R.id.capstone);
-        capstone.setOnClickListener(this);
     }
 
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.popular_movies:
-                Toast.makeText(this, "This button will launch my Popular Movies app", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.stock_hawk:
-                Toast.makeText(this, "This button will launch my Stock Hawk app", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.build_it_bigger:
-                Toast.makeText(this, "This button will launch my Build it Bigger app", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.make_app_material:
-                Toast.makeText(this, "This button will launch my Make Your App Material app", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.go_ubiquitous:
-                Toast.makeText(this, "This button will launch my Go Ubiquitous app", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.capstone:
-                Toast.makeText(this, "This button will launch my Capstone app", Toast.LENGTH_SHORT).show();
-                break;
+        Button button = (Button) view;
+        String appName = button.getText().toString();
+
+        if (appName.equals(getString(R.string.btn_title_popular_movies))) {
+            Toast.makeText(this, "This button will launch my Popular Movies app", Toast.LENGTH_SHORT).show();
+        } else if (appName.equals(getString(R.string.btn_title_stock_hawk))) {
+            Toast.makeText(this, "This button will launch my Stock Hawk app", Toast.LENGTH_SHORT).show();
+        } else if (appName.equals(getString(R.string.btn_title_build_it_bigger))) {
+            Toast.makeText(this, "This button will launch my Build it Bigger app", Toast.LENGTH_SHORT).show();
+        } else if (appName.equals(getString(R.string.btn_title_make_app_material))) {
+            Toast.makeText(this, "This button will launch my Make Your App Material app", Toast.LENGTH_SHORT).show();
+        } else if (appName.equals(getString(R.string.btn_title_go_ubiquitous))) {
+            Toast.makeText(this, "This button will launch my Go Ubiquitous app", Toast.LENGTH_SHORT).show();
+        } else if (appName.equals(getString(R.string.btn_title_capstone))) {
+            Toast.makeText(this, "This button will launch my Capstone app", Toast.LENGTH_SHORT).show();
         }
     }
 }
